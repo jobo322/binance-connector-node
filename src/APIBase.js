@@ -34,6 +34,7 @@ class APIBase {
       .update(queryString)
       .digest('hex')
 
+    console.log(`${path}?${queryString}&signature=${signature}`)
     return createRequest({
       method: method,
       baseURL: this.baseURL,
